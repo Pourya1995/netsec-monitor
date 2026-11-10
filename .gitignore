@@ -20,3 +20,13 @@ ENV/
 .idea/
 .DS_Store
 Thumbs.db
+# Local Python environments, credentials, generated databases, and caches
+.venv/
+venv/
+.env
+__pycache__/
+*.py[cod]
+*.db
+*.sqlite
+*.sqlite3
+flask-weather-app/instance/

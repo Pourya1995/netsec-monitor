@@ -1,0 +1,6 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}NetSec Monitor · Weather{% endblock %}</title><link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"></head>
+<body><main class="container"><header><a href="{{ url_for('index') }}" class="brand">NetSec Monitor</a><span>Weather service · {{ provider }}</span></header>
+{% with messages = get_flashed_messages(with_categories=true) %}{% if messages %}<section aria-live="polite">{% for category, message in messages %}<p class="notice {{ category }}">{{ message }}</p>{% endfor %}</section>{% endif %}{% endwith %}
+{% block content %}{% endblock %}<footer>Educational demo · API responses are stored locally in SQLite.</footer></main></body></html>
